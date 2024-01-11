@@ -19,18 +19,20 @@ const registerUser = asyncHandler( async (req, res) => {
 
    const {fullName, email, username, password} = req.body
    console.log("email:", email);
-   console.log("fullName : ", fullName);
-   console.log("username",username);
-   console.log("password", password);
+//    console.log("fullName : ", fullName);
+//    console.log("username",username);
+//    console.log("password", password);
 
+   // validation - data not empty
     if (
         [fullName, email, username, password].some((field) => field?.trim() === "")
     ) {
         throw new ApiError(400, "All fields are  required")
     } 
+    
     // here we check if user already available then send a error msg.
 
-    User.findOne ({
+    const existedUser = User.findOne ({
         $or: [{username}, {email}]
     })
 
