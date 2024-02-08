@@ -1,5 +1,5 @@
 
-# I am learning backend development using Node.js with the help of my tutor, Hitesh Choudhary.
+I am learning backend development using Node.js with the help of my tutor, Hitesh Choudhary.
 
 # Model link
 https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj
